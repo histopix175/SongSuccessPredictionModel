@@ -1,0 +1,205 @@
+{
+    "project_name": "Song Success Prediction Model",
+    "date_created": "2026-02-23 18:57:28.050453",
+    "sklearn_version": "1.5.1",
+    "data_information": {
+        "total_records": 84954,
+        "train_size": 67963,
+        "test_size": 16991,
+        "train_test_split": "80/20",
+        "target_variable": "popularity",
+        "scaling_method": "StandardScaler (fit on training only)",
+        "features_dropped": [
+            "track_id",
+            "track_name",
+            "album_name",
+            "duration_mm:ss:ms",
+            "latlng",
+            "capital",
+            "demonym",
+            "stream_count",
+            "artist_name"
+        ]
+    },
+    "models": [
+        {
+            "model_name": "Dummy (Mean)",
+            "model_type": "DummyRegressor",
+            "hyperparameters": {
+                "strategy": "mean"
+            },
+            "metrics": {
+                "Model": "Dummy (Mean)",
+                "R2": -9.721828204201088e-05,
+                "MAE": 11.512125572056322,
+                "RMSE": 14.826212214308708
+            },
+            "recommended": false
+        },
+        {
+            "model_name": "Dummy (Median)",
+            "model_type": "DummyRegressor",
+            "hyperparameters": {
+                "strategy": "median"
+            },
+            "metrics": {
+                "Model": "Dummy (Median)",
+                "R2": -0.007458681985762272,
+                "MAE": 11.455652992760873,
+                "RMSE": 14.880678177238332
+            },
+            "recommended": false
+        },
+        {
+            "model_name": "Linear Regression",
+            "model_type": "LinearRegression",
+            "hyperparameters": {
+                "copy_X": true,
+                "fit_intercept": true,
+                "n_jobs": null,
+                "positive": false
+            },
+            "metrics": {
+                "Model": "Linear Regression",
+                "R2": -0.0009241185239940997,
+                "MAE": 11.51579485554882,
+                "RMSE": 14.832340251228054
+            },
+            "recommended": false
+        },
+        {
+            "model_name": "Random Forest",
+            "model_type": "RandomForestRegressor",
+            "hyperparameters": {
+                "bootstrap": true,
+                "ccp_alpha": 0.0,
+                "criterion": "squared_error",
+                "max_depth": null,
+                "max_features": 1.0,
+                "max_leaf_nodes": null,
+                "max_samples": null,
+                "min_impurity_decrease": 0.0,
+                "min_samples_leaf": 1,
+                "min_samples_split": 2,
+                "min_weight_fraction_leaf": 0.0,
+                "monotonic_cst": null,
+                "n_estimators": 200,
+                "n_jobs": 1,
+                "oob_score": false,
+                "random_state": 42,
+                "verbose": 0,
+                "warm_start": false
+            },
+            "metrics": {
+                "Model": "Random Forest",
+                "R2": -0.013790719326364442,
+                "MAE": 11.639644223412395,
+                "RMSE": 14.927368637220148
+            },
+            "recommended": false
+        },
+        {
+            "model_name": "Random Forest - Best Params",
+            "model_type": "RandomForestRegressor",
+            "hyperparameters": {
+                "bootstrap": true,
+                "ccp_alpha": 0.0,
+                "criterion": "squared_error",
+                "max_depth": 10,
+                "max_features": 1.0,
+                "max_leaf_nodes": null,
+                "max_samples": null,
+                "min_impurity_decrease": 0.0,
+                "min_samples_leaf": 1,
+                "min_samples_split": 2,
+                "min_weight_fraction_leaf": 0.0,
+                "monotonic_cst": null,
+                "n_estimators": 400,
+                "n_jobs": 1,
+                "oob_score": false,
+                "random_state": 42,
+                "verbose": 0,
+                "warm_start": false
+            },
+            "metrics": {
+                "Model": "Random Forest - BP",
+                "R2": -0.0007531316120570342,
+                "MAE": 11.51900881888315,
+                "RMSE": 14.831073299852772
+            },
+            "recommended": false
+        },
+        {
+            "model_name": "Gradient Boosting",
+            "model_type": "GradientBoostingRegressor",
+            "hyperparameters": {
+                "alpha": 0.9,
+                "ccp_alpha": 0.0,
+                "criterion": "friedman_mse",
+                "init": null,
+                "learning_rate": 0.1,
+                "loss": "squared_error",
+                "max_depth": 3,
+                "max_features": null,
+                "max_leaf_nodes": null,
+                "min_impurity_decrease": 0.0,
+                "min_samples_leaf": 1,
+                "min_samples_split": 2,
+                "min_weight_fraction_leaf": 0.0,
+                "n_estimators": 200,
+                "n_iter_no_change": null,
+                "random_state": 42,
+                "subsample": 1.0,
+                "tol": 0.0001,
+                "validation_fraction": 0.1,
+                "verbose": 0,
+                "warm_start": false
+            },
+            "metrics": {
+                "Model": "Gradient Boosting",
+                "R2": -0.0031296167717906886,
+                "MAE": 11.53068418245182,
+                "RMSE": 14.848672508268308
+            },
+            "recommended": false
+        },
+        {
+            "model_name": "Gradient Boosting - Best Params",
+            "model_type": "GradientBoostingRegressor",
+            "hyperparameters": {
+                "alpha": 0.9,
+                "ccp_alpha": 0.0,
+                "criterion": "friedman_mse",
+                "init": null,
+                "learning_rate": 0.1,
+                "loss": "squared_error",
+                "max_depth": 10,
+                "max_features": null,
+                "max_leaf_nodes": null,
+                "min_impurity_decrease": 0.0,
+                "min_samples_leaf": 1,
+                "min_samples_split": 2,
+                "min_weight_fraction_leaf": 0.0,
+                "n_estimators": 200,
+                "n_iter_no_change": null,
+                "random_state": 42,
+                "subsample": 1.0,
+                "tol": 0.0001,
+                "validation_fraction": 0.1,
+                "verbose": 0,
+                "warm_start": false
+            },
+            "metrics": {
+                "Model": "Gradient Boosting - BP",
+                "R2": -0.04452808996273161,
+                "MAE": 11.78845164357776,
+                "RMSE": 15.15197218099655
+            },
+            "recommended": false
+        }
+    ],
+    "final_determination": {
+        "usable_model_found": false,
+        "reason": "All trained models performed similarly to or worse than the Dummy baseline. R\u00b2 values near zero or negative indicate insufficient predictive signal in the feature set."
+    }
+}
