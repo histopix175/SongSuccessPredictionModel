@@ -25,25 +25,20 @@ Song success is likely driven by external factors not present in the dataset (ma
 This negative result is supported by rigorous baseline comparison and is fully documented in the project report.
 
 Repository Structure
-Capstone_Project/
-│
-├── Data/
-│   ├── (Source CSV files)
-│   ├── (Cleaned and merged datasets)
-│
-├── Notebooks/
-│   ├── Data_Wrangling.ipynb
-│   ├── EDA.ipynb
-│   ├── Preprocessing.ipynb
-│   └── Modeling.ipynb
-│   ├── Alternatives/
-│     ├── (V2 – Hit Classification notebooks)
-│     ├── (V3 – Country Prediction notebooks)
-│  ├── outputs/
-│     └── model_metrics.json
-│
-├── Project Proposal/
-│   └── Project_Proposal.pdf
-│
-└── Project Report/
-    └── Song Success Prediction Model Final Project Report by Cameron Hicks.pdf
+- Data
+    - Source CSV files
+    - Cleaned and merged datasets
+- Notebooks
+        - Data_Wrangling.ipynb
+        - EDA.ipynb
+        - Preprocessing.ipynb
+        - Modeling.ipynb
+    - Alternatives
+        - V2 – Hit Classification notebooks
+        - V3 – Country Prediction notebooks
+    - outputs
+        - model_metrics.json
+- Project Proposal
+    - Project_Proposal.pdf
+- Project Report
+    - Song Success Prediction Model Final Project Report by Cameron Hicks.pdf
